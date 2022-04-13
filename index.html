@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- div container start -->
+  <div class="container">
+    <!-- div subcontainer start  -->
+    <div class="subcontainer">
+      <!-- left side div start  -->
+      <div class="left">
+        <div class="product-container">
+          <div class="detail">
+            <p class="brand">Redux </p>
+            <h2 class="watchName">Analog Men’s Watch</h2>
+          </div>
+          <div class="mySlides">
+            <img src="1.png" style="width: 100%;" />
+          </div>
+
+          <div class="mySlides">
+            <img src="2.png" style="width: 100%;" />
+          </div>
+
+          <div class="mySlides">
+            <img src="3.png" style="width: 100%;" />
+          </div>
+
+          <div class="dots">
+            <a class="change" onclick="currentSlide(1)"></a>
+            <a class="change" onclick="currentSlide(2)"></a>
+            <a class="change" onclick="currentSlide(3)"></a>
+          </div>
+        </div>
+      </div>
+      <!-- left side div end  -->
+
+      <!-- right side div start-->
+      <div class="right">
+        <div class="checkout_form">
+          <p>Checkout</p>
+          <!-- <div class="details"> -->
+          <div class="field">
+            <input type="text" placeholder="Card Name">
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Card Number">
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Cardholder Name">
+          </div>
+          <div class="field last_field">
+            <div class="item">
+              <input type="text" placeholder="Expiry Date">
+            </div>
+            <div class="item">
+              <input type="text" placeholder="CVV">
+            </div>
+          </div>
+          <button type="submit" class="btn">Complete Order</button>
+          <!-- </div> -->
+        </div>
+        <!-- right side div end  -->
+      </div>
+      <!-- div subcontainer end -->
+    </div>
+    <!-- div container end -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background: #19152dde;
+  overflow: hidden;
+}
+
+/* ================= 
+TWO COLUMN LAYOUT
+================= */
+/* center everthing vertically  */
+.container {
+  width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* css for creating two column layout  */
+.subcontainer {
+  display: grid;
+  grid-template-columns: 50% 40%;
+}
+
+/* transform left side div  */
+.left {
+  transform: translateX(55px);
+  z-index: 1;
+}
+
+/* css for setting background and transform right side div */
+.right {
+  background: #3c3bcb;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transform: translateX(50px);
+}
+
+/* layout end  */
+
+/* ================= 
+CSS FOR PRODUCT 
+================= */
+
+/* css for adding bg image on product container div */
+.product-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  background-image: url("bg.png");
+  box-shadow: 43px 26px 145px -2px rgba(0, 0, 0, 0.51);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+.detail {
+  position: relative;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.detail .brand {
+  margin-bottom: 0rem;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #6b6ad4;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.detail .watchName {
+  margin: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.mySlides {
+  display: block;
+  width: 350px;
+  margin: auto;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* cs for switch product image  */
+.dots {
+  display: flex;
+  justify-content: center;
+  bottom: -3rem;
+  position: relative;
+}
+
+/* css for change image dot button */
+.change {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #3c3bcb;
+  width: 10px;
+  padding: 6px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.6s ease;
+  height: 10px;
+  margin-left: 1rem;
+}
+
+.change:hover,
+.active {
+  background-color: #3c3bcb;
+}
+
+/* ================= 
+CSS FOR CHECKOUT FORM
+================= */
+
+.checkout_form {
+  margin: auto;
+  padding: 55px 35px;
+  border-top-right-radius: 20px;
+  height: 100%;
+  border-bottom-right-radius: 20px;
+}
+
+.checkout_form p {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  font-weight: 800;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(147, 144, 144);
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+
+input[type="text"]::placeholder {
+  color: #fff;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #8686f6;
+}
+
+.field.last_field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field.last_field .item {
+  width: 48%;
+}
+
+/* css submit button  */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: 0.2s;
+  background-color: #ddd;
+  margin-top: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #7852e2;
+}
+
+/* css for responsiveness */
+@media only screen and (max-width: 725px) {
+  body {
+    overflow: auto;
+  }
+  .container {
+    width: 100vw;
+    position: absolute;
+    transform: translate(0, 0);
+    top: 0;
+    left: 0;
+  }
+  .subcontainer {
+    display: block;
+  }
+  .left {
+    transform: none;
+  }
+  .right {
+    background: #3c3bcb;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    transform: none;
+  }
+}

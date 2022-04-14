@@ -82,7 +82,7 @@ CSS FOR PRODUCT
   font-weight: bold;
 }
 
-.mySlides {
+.imgSlide {
   display: block;
   width: 350px;
   margin: auto;
@@ -101,8 +101,8 @@ img {
   position: relative;
 }
 
-/* css for change image dot button */
-.change {
+/* css for change image dot pagination */
+.pagination {
   display: block;
   position: relative;
   cursor: pointer;
@@ -117,7 +117,7 @@ img {
   margin-left: 1rem;
 }
 
-.change:hover,
+.pagination:hover,
 .active {
   background-color: #3c3bcb;
 }

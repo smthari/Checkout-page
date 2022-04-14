@@ -1,46 +1,39 @@
+// declaring slideIndex var and assigning default value 1 ( because we want to show first image bydefault )
 var slideIndex = 1;
+// calling showSlides function and passing slideIndex as an argument so that we can use this slideIndex value in showSlides function
 showSlides(slideIndex);
 
+// creating function to switch slide based on currentSlide value (value of n getting from pagination onClick)
 function currentSlide(n) {
   showSlides((slideIndex = n));
-  /* console.log(slideIndex); */
+  // console.log(slideIndex); // for explanation purpose
 }
 
-function changeSlide(n) {
-  showSlides((slideIndex += n));
-  /* console.log(slideIndex); */
-}
-
-// we have to pass n as an parameter in function
-// we'll get the value of n by calling function and passing slideIndex as an argument
-function showSlides(n) {
-  // console.log(slideIndex);
+// function to showSlides
+function showSlides() {
+  console.log(slideIndex); // for explanation purpose
 
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  // console.log(typeof slides + " " + slides.length);
-  var dots = document.getElementsByClassName("change");
+  /* targeting all element by classname imgSlide and pagination  */
+  var slides = document.getElementsByClassName("imgSlide");
+  var dots = document.getElementsByClassName("pagination");
+  // console.log(slides.length); // for explanation purpose
+  // console.log(dots.length); // for explanation purpose
 
-  // let's write condition to loop a slideshow
-  // when n is greater then slides.length then value of slideIndex should be 1
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  // when n is less then 1 then value of slideIndex should be equal to slides.length
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  /* hiding all images by default using display none  */
+  /* hiding all images by default using for loop and display none  */
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    // console.log(slides[i])
   }
 
+  /* removing active class from all dots pagination  */
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].classList.remove("active");
   }
+
+  /* show image slide dynamically (The value of slideIndex will dynamically change) */
   slides[slideIndex - 1].style.display = "block";
-  // console.log(`slide index ${slideIndex - 1}`);
-  dots[slideIndex - 1].className += " active";
+  // console.log(`slide index ${slideIndex - 1}`); // for explanation purpose
+
+  /* adding active class to respective dots pagination  */
+  dots[slideIndex - 1].classList.add("active");
 }

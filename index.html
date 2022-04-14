@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Static Template</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- google fonts cdn  -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
@@ -19,37 +20,40 @@
     <div class="subcontainer">
       <!-- left side div start  -->
       <div class="left">
+        <!-- product container div start  -->
         <div class="product-container">
           <div class="detail">
             <p class="brand">Redux </p>
             <h2 class="watchName">Analog Men’s Watch</h2>
           </div>
-          <div class="mySlides">
+          <div class="imgSlide">
             <img src="Product Images/1.png" style="width: 100%;" />
           </div>
 
-          <div class="mySlides">
+          <div class="imgSlide">
             <img src="Product Images/2.png" style="width: 100%;" />
           </div>
 
-          <div class="mySlides">
+          <div class="imgSlide">
             <img src="Product Images/3.png" style="width: 100%;" />
           </div>
-
+          <!-- dot pagination  -->
           <div class="dots">
-            <a class="change" onclick="currentSlide(1)"></a>
-            <a class="change" onclick="currentSlide(2)"></a>
-            <a class="change" onclick="currentSlide(3)"></a>
+            <a class="pagination" onclick="currentSlide(1)"></a>
+            <a class="pagination" onclick="currentSlide(2)"></a>
+            <a class="pagination" onclick="currentSlide(3)"></a>
           </div>
+          <!-- dot pagination  -->
         </div>
+        <!-- product container div end  -->
       </div>
       <!-- left side div end  -->
 
       <!-- right side div start-->
       <div class="right">
+        <!-- checkout form div start  -->
         <div class="checkout_form">
           <p>Checkout</p>
-          <!-- <div class="details"> -->
           <div class="field">
             <input type="text" placeholder="Card Name">
           </div>
@@ -68,15 +72,16 @@
             </div>
           </div>
           <button type="submit" class="btn">Complete Order</button>
-          <!-- </div> -->
         </div>
-        <!-- right side div end  -->
+        <!-- checkout form div start  -->
       </div>
-      <!-- div subcontainer end -->
+      <!-- right side div end  -->
     </div>
-    <!-- div container end -->
+    <!-- div subcontainer end -->
+  </div>
+  <!-- div container end -->
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 

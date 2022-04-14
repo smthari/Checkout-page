@@ -28,13 +28,13 @@ TWO COLUMN LAYOUT
   grid-template-columns: 50% 40%;
 }
 
-/* transform left side div  */
+/* overlap left side div from left side using transform and z-index  */
 .left {
   transform: translateX(55px);
   z-index: 1;
 }
 
-/* css for setting background and transform right side div */
+/* overlap right side div from right side */
 .right {
   background: #3c3bcb;
   margin-top: 2rem;
@@ -126,7 +126,7 @@ img {
 CSS FOR CHECKOUT FORM
 ================= */
 
-.checkout_form {
+.checkout-container {
   margin: auto;
   padding: 55px 35px;
   border-top-right-radius: 20px;
@@ -134,7 +134,7 @@ CSS FOR CHECKOUT FORM
   border-bottom-right-radius: 20px;
 }
 
-.checkout_form p {
+.checkout-container p {
   margin-bottom: 25px;
   font-size: 1.5rem;
   text-transform: uppercase;
